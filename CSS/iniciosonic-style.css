@@ -1,0 +1,244 @@
+/* Reseta o estilo padrão do navegador */
+body, h1, h2, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive ;
+}
+
+/* Oculta o elemento <audio> e remove seu tamanho da tela */
+audio {
+    background-color: transparent;
+    position: absolute; /* Remove o elemento da área visível */
+    width: 1000px;           /* Reduz a largura a zero */
+    height: 0;          /* Reduz a altura a zero */
+    overflow: hidden;   /* Oculta qualquer conteúdo excedente */
+    opacity: 0;         /* Torna o elemento invisível */
+    z-index: -1;        /* Coloca o elemento atrás de outros conteúdos */
+    display: none;
+}
+
+/* Estilo geral do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a218a;
+    background-size: cover; /* Faz a imagem cobrir toda a área da tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Remove margens padrão do body */
+}
+
+
+/* Estilo do contêiner do menu */
+.menu-container {
+    text-align: center;
+}
+
+/* Estilo do título do menu */
+.menu-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #0a0a0a;
+}
+
+/* Estilo dos botões */
+.menu-container button {
+    background-color: #3c33ec;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo dos botões ao passar o mouse */
+.menu-container button:hover {
+    background-color: #0a218a;
+}
+.modal-inicio{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.modal-inicio.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-inicio h2{
+    color:#0a0a0a ;
+    margin-top: 20px;
+}
+
+.message-inicio {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+.message-inicio h2 span {
+    color: #002fffe7;
+}
+
+.menu-container button {
+    background-color: #3c33ec;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+/* Efeito ao passar o mouse */
+.menu-container button:hover {
+    background-color: #0a218a;
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+.menu-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #00aaff; /* Azul vibrante */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+}
+
+.message, .message-inicio{
+    width: 630px;
+    animation: digitando 2s steps(25), blink .4s infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    margin-top: -100px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+    
+}
+
+@keyframes digitando{
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blink{
+    40%{
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+    
+    .menu-container h2 {
+        font-size: 1.5rem; /* Reduz o tamanho do subtítulo */
+    }
+    
+    .message-inicio {
+        padding: 20px; /* Reduz o padding para telas menores */
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+
+    /* Ajustes de botão, se houver */
+    .menu-container button {
+        font-size: 1rem; /* Reduz o tamanho do botão */
+        padding: 0.5rem 1rem; /* Ajusta o padding do botão */
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#settings-menu {
+    background-color:#f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.fade-out {
+    animation: fade 0.5s forwards;
+}
+
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Fixa o modal na tela */
+    z-index: 1; /* Coloca o modal acima do conteúdo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* Centraliza o modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus, p{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .menu-container h1 {
+        font-size: 1.5rem; /* Tamanho ainda menor para celulares */
+    }
+
+    .menu-container h2 {
+        font-size: 1.2rem; /* Tamanho ainda menor para celulares */
+    }
+}

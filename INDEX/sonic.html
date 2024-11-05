@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Sonic</title>
+    <link rel="shortcut icon" href="/img/sonic-icon-17.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/sonic-style.css">
+</head>
+
+<body>
+    <div class="game-board">
+        <img class="arvores" src="/img/arvores.png" alt="arvore-decoração">
+        <img class="loop" src="/img/loop.webp" alt="outras coisas">
+        <img src="/img/tails1.gif" class="cloud">
+        <img src="/img/sonic2.gif" class="sonic">
+        <audio autoplay="autoplay" controls="controls" id="bg-audio">
+            <audio id="game-over-audio" src="/audio/gameover (1).mp3"></audio>
+            <source src="/audio/01- Sonic-1-Music-Green-Hill-Zone.mp3" type="audio/mp3"/>
+            seu navegador não suporta HTML5
+        </audio>
+        <img src="/img/vilão.gif" class="robo">  
+    </div>
+    <img class="grama" src="/img/grama.png" alt="gramado">
+    
+    <div class="score">Pontuação: 0</div> <!-- Adicionando exibição da pontuação -->
+    
+    <div class="game-over" style="visibility: hidden;"> <!-- Inicialmente invisível -->
+        <h1 class="game-over-text"></h1>
+        <div class="final-score"></div> <!-- Adicionando exibição da pontuação final -->
+        <button class="restart">REINICIAR</button>
+    </div>
+
+    <script src="/JAVASCRIPT/sonic-script.js" defer></script>
+</body>
+</html>
