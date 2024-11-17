@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
     <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
     <title>GameTek Studios</title>
 </head>
@@ -34,22 +35,18 @@
 
             <div class="slide-box primeiro">
                 <img class="img-desktop" src="img/sonic.jpg" alt="slide 1">
-                <img class="img-mobile" src="img/slide-1-mob.jpg" alt="slide 1">
             </div>
 
             <div class="slide-box">
                 <img class="img-desktop" src="img/jogodavelha.jpg" alt="slide 3">
-                <img class="img-mobile" src="img/slide-2-mob.jpg" alt="slide 1">
             </div>
 
             <div class="slide-box">
                 <img class="img-desktop" src="img/memoria.jpg" alt="slide 3">
-                <img class="img-mobile" src="img/slide-3-mob.jpg" alt="slide 3">
             </div>
 
             <div class="slide-box">
                 <img class="img-desktop" src="img/tela-snake.jpg" alt="slide 3">
-                <img class="img-mobile" src="img/slide-4-mob.jpg" alt="slide 3">
             </div>
 
             <div class="nav-auto">
@@ -72,9 +69,9 @@
     </header><br><br>
     <!--Essa é a segunda parte do site onde esta localizado sobre a a equipe e os participantes do grupo Lembrando sao todas as mesmas classes-->
     <main>
-      <h1><strong>Sobre</strong> nossa equipe</h1><br>
+      <h1 id="sobre"><strong>Sobre</strong> nossa equipe</h1><br>
        <!--Essa div tem uma extrema importancia e responsavel para mexer em outros box dos participantes do grupos-->
-      <div class="main-geral" id="sobre">
+      <div class="main-geral" data-aos="zoom-in">
         <div class="cartao-equipe">
           <img src="/img/isaac.jpg" alt="Foto do Membro" onmouseover="this.src='/img/isaac2.jpg'" onmouseout="this.src='/img/isaac.jpg'"  />
           <h2>Isaac</h2>
@@ -106,10 +103,11 @@
             <h2>Kaleby</h2>
             <p>Responsavel pelo jogo Snake</p>
           </div>
-      </div>
+      </div><br>
 
-        
-    <div class="container" id="Jogos">
+      <h1><strong>Nossos</strong>Jogos</h1>
+    <div class="container" id="Jogos" data-aos="zoom-in-up"
+    data-aos-anchor-placement="top-bottom">
         <div class="card">
             <img src="/img/jogo da velha.png" alt="Imagem do Card" class="card-img">
             <div class="card-body" >
@@ -201,7 +199,7 @@
         </div>
     </footer>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/JAVASCRIPT/script.js"></script>
 
 </body>
