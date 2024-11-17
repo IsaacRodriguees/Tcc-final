@@ -24,7 +24,7 @@ transition: 0.3s;
 
 a:hover{
 opacity: 0.7;
-color: rgb(0, 0, 0);
+color: rgb(255, 0, 0);
 }
 
 .logo{
@@ -65,6 +65,104 @@ transition: 0.3s;
 .nav-list li:hover{
 transform: scale(1.1);
 } 
+
+/* Estilos para o modo claro (padrão) */
+body {
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Estilos para o botão de alternância */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #54038f;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 300px;
+    margin-top: 20px;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+    margin-right: 40px;
+}
+
+/* Alterando a cor do botão ao passar o mouse */
+.toggle-btn:hover {
+    background-color: #ff0054;
+}
+
+/* Modo escuro - botão com ícone do sol */
+body.dark-mode .toggle-btn {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Efeito nos links no modo escuro */
+body.dark-mode a {
+    color: #bbb;
+}
+
+body.dark-mode a:hover {
+    color: #ff0054;
+}
+
+/* Cartões de membros da equipe no modo escuro */
+body.dark-mode .cartao-equipe {
+    background-color: #333;
+    color: #f1f1f1;
+    border: 1px solid #444;
+}
+
+body.dark-mode .cartao-equipe:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .cartao-equipe img {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+body.dark-mode .cartao-equipe h2 {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+body.dark-mode .cartao-equipe p {
+    color: #ccc;
+}
+
+/* Cartões de jogos no modo escuro */
+body.dark-mode .card {
+    background-color: #333;
+    color: #f1f1f1;
+    border: 1px solid #444;
+}
+
+body.dark-mode .card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .card-img{
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+body.dark-mode .card-title {
+    color: #fff;
+    text-shadow: 0 0 2px rgb(255, 255, 255), 0 0 6px rgb(255, 255, 255);
+}
+
+body.dark-mode .card-description {
+    color: #ffffff;}
 
 section.slider{
     margin: 0 auto;
@@ -435,7 +533,7 @@ footer {
 .social-links {
     display: flex;
     justify-content: start;
-    margin-left: 75px;
+    margin-left: 55px;
 }
 
 .social-links li {

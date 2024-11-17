@@ -162,6 +162,9 @@ const gameOver = () => {
     canvas.style.filter = "blur(2px)"
 }
 
+let baseGameSpeed = 100;  // Velocidade inicial em milissegundos (quanto menor, mais rápido).
+let speedIncreaseFactor = 5;    // Quanto a velocidade aumenta a cada segmento da cobrinha (fator de aumento da velocidade).
+let minSpeed = 50;       // Velocidade mínima que a cobrinha pode atingir (não deve ser inferior a 100ms para manter o jogo jogável).
 
 const gameLoop = () => {
     clearInterval(loopId)
@@ -174,10 +177,21 @@ const gameLoop = () => {
     chackEat()
     checkCollision()
 
+    // Calcula o novo tempo de intervalo baseado no tamanho da cobrinha
+    let newGameSpeed = baseGameSpeed - (snake.length * speedIncreaseFactor);
+    
+    // Impõe um limite mínimo de velocidade (não permitindo que a velocidade caia abaixo de 100ms)
+    if (newGameSpeed < minSpeed) {
+        newGameSpeed = minSpeed;
+    }
+
+    // Ajusta a velocidade
     loopId = setTimeout(() => {
         gameLoop()
-    }, 300)
+    }, newGameSpeed);
 }
+
+
 
 gameLoop()
 
